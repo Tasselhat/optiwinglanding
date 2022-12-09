@@ -1,0 +1,336 @@
+.navbar {
+  background: linear-gradient(to bottom, silver, #333);
+  /* Add a subtle box shadow beneath the surface to create a sense of depth */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 80px;
+  padding: 0 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar svg {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(13%) saturate(165%)
+    hue-rotate(175deg) brightness(92%) contrast(98%);
+}
+
+.nav-menu svg {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(13%) saturate(165%)
+    hue-rotate(175deg) brightness(92%) contrast(98%);
+}
+
+.profile-menu svg {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(13%) saturate(165%)
+    hue-rotate(175deg) brightness(92%) contrast(98%);
+}
+
+.navbar-right {
+  flex-grow: 1;
+  color: #ffffff;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.navbar-logo {
+  max-width: 70px;
+}
+.navbar-right a {
+  margin: 0 1rem 0 1rem;
+}
+
+.navbar a {
+  color: var(--white);
+  text-decoration: none;
+  align-self: center;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 3rem;
+  background: none;
+}
+
+.home-icon {
+  font-size: 32px;
+  background: none;
+}
+
+.profile-icon {
+  margin: 0 2rem 0 2rem;
+  font-size: 32px;
+  background: none;
+}
+
+.nav-menu {
+  background: linear-gradient(00.25turn, #333, 11%, var(--teal));
+  width: 250px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 500ms;
+  z-index: 1000;
+}
+
+.nav-menu.active {
+  left: 0;
+  height: 100vh;
+  transition: 350ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: darkslategray;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  color: white;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-toggle a {
+  color: white;
+}
+
+.profile-menu {
+  background: linear-gradient(#0a0a29, #000033);
+  width: 250px;
+  margin-top: 80px;
+  height: 0px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: 500ms;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.profile-menu.active {
+  right: 0;
+  height: 250px;
+  transition: 350ms;
+}
+
+.profile-menu-items {
+  width: 100%;
+}
+
+.sidebar-item-title {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.1rem;
+  letter-spacing: 0em;
+  text-transform: none;
+  margin-left: 16px;
+}
+
+.profile-menu-item-title {
+  margin-left: 16px;
+  margin-top: 2px;
+}
+
+.header-link {
+  background-color: transparent;
+  padding: 0px 7px 3px 7px;
+}
+
+.header-button {
+  font-weight: 600;
+  font-style: normal;
+  font-size: calc(0.2 * 1vw + 1rem);
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.6em;
+  background: transparent;
+  border: solid var(--white) 3px;
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.4vw 0.5vw 0.4vw 0.5vw;
+  margin-right: 0.4vw;
+  margin-left: 0.4vw;
+  transition: background-color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.3s,
+    color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.3s, padding 200ms, margin 200ms;
+}
+
+.header-button:hover {
+  background-color: white;
+  color: var(--teal);
+  border: solid transparent 3px;
+  opacity: 0.9;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+}
+
+.header-button:active {
+  opacity: 0.6;
+}
+
+/* parent portal buttons */
+
+.parent-portal-buttons {
+  margin: 0 1rem 0 1rem;
+}
+
+.navbar-right a.nomargin {
+  margin: 0;
+  padding: 0;
+}
+
+.parent-portal-login-button {
+  font-weight: 600;
+  font-style: normal;
+  font-size: calc(0.2 * 1vw + 1rem);
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.6em;
+  background-color: white;
+  color: var(--pink);
+  border: none;
+  border-radius: 0 12px 12px 0;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  white-space: nowrap;
+}
+
+.parent-portal-login-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.login-button-front {
+  will-change: transform;
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0 12px 12px 0;
+  font-size: 1.25rem;
+  background: var(--teal);
+  color: white;
+  transform: translateY(-4px);
+}
+
+.parent-portal-login-button:hover .login-button-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.parent-portal-login-button:active .login-button-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.parent-portal-register-button {
+  font-weight: 600;
+  font-style: normal;
+  font-size: calc(0.2 * 1vw + 1rem);
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.6em;
+  background-color: white;
+  color: var(--teal);
+  border: none;
+  border-radius: 12px 0 0 12px;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+.parent-portal-register-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.reg-button-front {
+  will-change: transform;
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  display: block;
+  padding: 0.5rem;
+  border-radius: 12px 0 0 12px;
+  font-size: 1.25rem;
+  background: var(--teal);
+  color: white;
+  transform: translateY(-4px);
+}
+
+.parent-portal-register-button:hover .reg-button-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.parent-portal-register-button:active .reg-button-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.parent-portal-button {
+  font-weight: 600;
+  font-style: normal;
+  font-size: calc(0.2 * 1vw + 1rem);
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.6em;
+  background-color: white;
+  color: var(--teal);
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  white-space: nowrap;
+}
+
+.button-front {
+  will-change: transform;
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  display: block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: var(--teal);
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* hide links on small screens */
+
+@media screen and (max-width: 1000px) {
+  .header-link {
+    display: none;
+  }
+}
