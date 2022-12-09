@@ -3,11 +3,9 @@ import * as FaIcons from "react-icons/fa";
 import * as IoIcons from "react-icons/io";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./ComponentData/SidebarData.js";
-import "../css/Navbar.css";
+import "../css/Header.css";
 
-import Logo from "./images/Shasta_Logo_Circle.png";
-
-export default class Navbar extends React.Component {
+export default class Header extends React.Component {
   constructor(props) {
     super(props);
 
@@ -33,26 +31,57 @@ export default class Navbar extends React.Component {
     this.setState({ sidebar: !this.state.sidebar, profileMenu: false });
   }
 
+  handleScrollToHome() {
+    this.props.refProp.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
+  handleScrollToInstructions() {
+    this.props.refProp2.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
+  scrollToBottom = () => {
+    const height = document.body.scrollHeight;
+
+    // Scroll to the bottom of the document smoothly
+    window.scrollTo({
+      top: height,
+      behavior: 'smooth',
+    });
+  };
+
   render() {
     return (
       <div>
         <div className="navbar">
-          <Link to="#" className="menu-bars">
+          <a href="#" className="menu-bars">
             <IoIcons.IoMdMenu onClick={() => this.showSidebar()} />
-          </Link>
-          <Link to="/home">
+          </a>
+          <a href="/home">
             <img alt="logo" src="" className="navbar-logo"></img>
-          </Link>
+          </a>
           <div className="navbar-right">
-            <Link to="/calendar" className="header-link">
-              <button className="header-button">Class Schedule</button>
-            </Link>
-            <Link to="/about" className="header-link">
-              <button className="header-button">About Us</button>
-            </Link>
-            <Link to="/contact" className="header-link">
-              <button className="header-button">Contact Us</button>
-            </Link>
+            <a className="header-link">
+              <button
+                onClick={() => this.handleScrollToHome()}
+                className="header-button"
+              >
+                Home
+              </button>
+            </a>
+            <a className="header-link">
+              <button onClick={() => this.handleScrollToInstructions()} className="header-button">
+                Instructions
+              </button>
+            </a>
+            <a className="header-link" onClick={() => this.scrollToBottom()}>
+              <button className="header-button">To Bottom</button>
+            </a>
             <div className="parent-portal-buttons">
               <a
                 href="https://app.jackrabbitclass.com/regv2.asp?id=532938"
@@ -98,26 +127,26 @@ export default class Navbar extends React.Component {
                 </button>
               </a>
             </div>
-            <Link to="/home" className="home-icon">
+            <a href="/home" className="home-icon">
               <FaIcons.FaHome></FaIcons.FaHome>
-            </Link>
+            </a>
           </div>
         </div>
         <nav className={this.state.sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={() => this.showSidebar()}>
             <li className="navbar-toggle">
-              <Link to="#" className="menu-bars">
+              <a href="#" className="menu-bars">
                 <IoIcons.IoMdClose />
-              </Link>
+              </a>
             </li>
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
                   {item.path ? (
-                    <Link to={item.path}>
+                    <a href={item.path}>
                       {item.icon}
                       <span className="sidebar-item-title">{item.title}</span>
-                    </Link>
+                    </a>
                   ) : (
                     <a href={item.href}>
                       {item.icon}

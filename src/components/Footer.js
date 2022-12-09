@@ -22,10 +22,10 @@ class Footer extends Component {
                 <AiIcons.AiFillPushpin />
                 &nbsp;2629 Bechelli Ln, Redding, CA 96002
               </p>
-			  <div className="line"></div>
+              <div className="line"></div>
               <div className="padding-bottom-24">
-				<p>Website made by Tim Schneider</p>
-				<br />
+                <p>Website made by Tim Schneider</p>
+                <br />
                 <a
                   className="icon-footer icon--fill"
                   href="https://www.linkedin.com/in/timbschneider/"
@@ -46,24 +46,24 @@ class Footer extends Component {
               <div className="line"></div>
               <ul>
                 <li className="list-item">
-                  <Link to="/" className="footer-link">
+                  <a to="/" className="footer-link">
                     Home
-                  </Link>
+                  </a>
                 </li>
                 <li className="list-item">
-                  <Link to="/About" className="footer-link">
+                  <a to="/About" className="footer-link">
                     About
-                  </Link>
+                  </a>
                 </li>
                 <li className="list-item">
-                  <Link to="/Contact" className="footer-link">
+                  <a to="/Contact" className="footer-link">
                     Contact
-                  </Link>
+                  </a>
                 </li>
                 <li className="list-item">
-                  <Link to="/location" className="footer-link">
+                  <a to="/location" className="footer-link">
                     Map
-                  </Link>
+                  </a>
                 </li>
                 <li className="list-item"></li>
               </ul>
@@ -94,9 +94,9 @@ class Footer extends Component {
           <div className="footer-column">
             <div className="footer-column-content">
               <div className="line"></div>
-              <Link to="/Contact" className="footer-link padding-bottom-24">
+              <a to="/Contact" className="footer-link padding-bottom-24">
                 <u>Contact Us</u>
-              </Link>
+              </a>
               <a
                 href="mailto: shastagymnasticsmedia@gmail.com"
                 className="footer-link padding-bottom-24"
