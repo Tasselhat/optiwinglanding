@@ -14,17 +14,6 @@ export default class Header extends React.Component {
       profileMenu: false,
       isHovering: false,
     };
-
-    this.handleMouseOver = this.handleMouseOver.bind(this);
-    this.handleMouseOut = this.handleMouseOut.bind(this);
-  }
-
-  handleMouseOver() {
-    this.setState({ isHovering: true });
-  }
-
-  handleMouseOut() {
-    this.setState({ isHovering: false });
   }
 
   showSidebar() {
@@ -51,7 +40,7 @@ export default class Header extends React.Component {
     // Scroll to the bottom of the document smoothly
     window.scrollTo({
       top: height,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -75,61 +64,29 @@ export default class Header extends React.Component {
               </button>
             </a>
             <a className="header-link">
-              <button onClick={() => this.handleScrollToInstructions()} className="header-button">
+              <button
+                onClick={() => this.handleScrollToInstructions()}
+                className="header-button"
+              >
                 Instructions
               </button>
             </a>
             <a className="header-link" onClick={() => this.scrollToBottom()}>
               <button className="header-button">To Bottom</button>
             </a>
-            <div className="parent-portal-buttons">
+            <a className="header-link" href="https://app.optiwing.com/register">
+              <button className="header-button">Login</button>
+            </a>
+            <div className="redirect-buttons">
               <a
-                href="https://app.jackrabbitclass.com/regv2.asp?id=532938"
+                href="https://app.optiwing.com/register"
                 className="header-link nomargin"
               >
-                {this.state.isHovering && (
-                  <button className="parent-portal-register-button">
-                    <span
-                      onMouseOver={() => this.handleMouseOver()}
-                      onMouseOut={() => this.handleMouseOut()}
-                      className="reg-button-front"
-                    >
-                      Register
-                    </span>
-                  </button>
-                )}
-                {!this.state.isHovering && (
-                  <button className="parent-portal-button">
-                    <span
-                      onMouseOver={() => this.handleMouseOver()}
-                      onMouseOut={() => this.handleMouseOut()}
-                      className="button-front"
-                    >
-                      Parent Portal
-                    </span>
-                  </button>
-                )}
-              </a>
-              <a
-                href="https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgID=532938"
-                className="header-link nomargin"
-              >
-                <button className="parent-portal-login-button">
-                  {this.state.isHovering && (
-                    <span
-                      onMouseOver={() => this.handleMouseOver()}
-                      onMouseOut={() => this.handleMouseOut()}
-                      className="login-button-front"
-                    >
-                      Login
-                    </span>
-                  )}
+                <button className="free-credit-button">
+                  <span className="button-front">Try it For Free</span>
                 </button>
               </a>
             </div>
-            <a href="/home" className="home-icon">
-              <FaIcons.FaHome></FaIcons.FaHome>
-            </a>
           </div>
         </div>
         <nav className={this.state.sidebar ? "nav-menu active" : "nav-menu"}>

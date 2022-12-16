@@ -15,14 +15,27 @@ function App() {
     <main>
       <Header refProp={homeRef} refProp2={instructionsRef} />
       <section className="homepage-section-containter">
-        <div className="title-block" ref={homeRef}>
-          <div className="title">Welcome to My App</div>
-          <div>
-            <button className="button">Get Started</button>
+        <div className="title-wrapper">
+          <div className="title-background"></div>
+          <div className="title-container">
+            <div className="title-block" ref={homeRef}>
+              <h1 className="title" align="center">
+                Automatically{" "}
+                <span className="electricblue">rank and compare keywords</span>,
+                see <span className="electricblue">connections </span>
+                and compare by{" "}
+                <span className="electricblue">topical similarity.</span>
+              </h1>
+              <div>
+                <button className="get-started-button">
+                  <span className="start-button-front">Get Started</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <div className="description">
-          <h2>How to Use My App</h2>
+          <h1>How to Use My App</h1>
           <p>My app is easy to use. Follow these steps to get started:</p>
         </div>
         <div className="instructions" ref={instructionsRef}>
