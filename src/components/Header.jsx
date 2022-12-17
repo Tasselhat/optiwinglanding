@@ -11,13 +11,12 @@ export default class Header extends React.Component {
 
     this.state = {
       sidebar: false,
-      profileMenu: false,
       isHovering: false,
     };
   }
 
   showSidebar() {
-    this.setState({ sidebar: !this.state.sidebar, profileMenu: false });
+    this.setState({ sidebar: !this.state.sidebar });
   }
 
   handleScrollToHome() {
@@ -25,6 +24,7 @@ export default class Header extends React.Component {
       behavior: "smooth",
       block: "start",
     });
+    this.setState({ sidebar: false });
   }
 
   handleScrollToInstructions() {
@@ -32,6 +32,7 @@ export default class Header extends React.Component {
       behavior: "smooth",
       block: "start",
     });
+    this.setState({ sidebar: false });
   }
 
   scrollToBottom = () => {
@@ -42,15 +43,16 @@ export default class Header extends React.Component {
       top: height,
       behavior: "smooth",
     });
+    this.setState({ sidebar: false });
   };
 
   render() {
     return (
       <div>
         <div className="navbar">
-          <a href="#" className="menu-bars">
+          <div className="menu-bars">
             <IoIcons.IoMdMenu onClick={() => this.showSidebar()} />
-          </a>
+          </div>
           <a href="/home">
             <img alt="logo" src="" className="navbar-logo"></img>
           </a>
@@ -92,9 +94,9 @@ export default class Header extends React.Component {
         <nav className={this.state.sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={() => this.showSidebar()}>
             <li className="navbar-toggle">
-              <a href="#" className="menu-bars">
+              <div className="menu-bars">
                 <IoIcons.IoMdClose />
-              </a>
+              </div>
             </li>
             {SidebarData.map((item, index) => {
               return (

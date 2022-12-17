@@ -62,8 +62,18 @@
   }
 }
 
+.description {
+  margin: 20px;
+}
+
 .title {
   font-size: 47px !important;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.title-secondary {
+  font-size: 18px;
   font-weight: 600;
   color: var(--white);
 }
@@ -133,22 +143,32 @@
 }
 
 .instructions {
-  display: flex;
+  display: grid;
+  grid-template-areas: "step-1 step-2 step-3";
   justify-content: center;
 }
 
 .instruction-card {
-  width: 200px;
-  padding: 20px;
+  min-width: 200px;
+  min-height: 300px;
   margin: 20px;
   border: 1px solid #333;
   border-radius: 5px;
 }
 
 .instruction-card-title {
+  width: fit-content;
   font-size: 18px;
   color: #333;
   margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--electricblue);
+}
+
+.instruction-card-p {
+  font-size: 18px;
+  color: #333;
+  padding: 20px;
 }
 
 .homepage-h1 {
