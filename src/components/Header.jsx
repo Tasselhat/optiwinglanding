@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 import * as IoIcons from "react-icons/io";
-import { Link } from "react-router-dom";
-import { SidebarData } from "./ComponentData/SidebarData.js";
+import * as AiIcons from "react-icons/ai";
 import "../css/Header.css";
 
 export default class Header extends React.Component {
@@ -15,25 +15,25 @@ export default class Header extends React.Component {
     };
   }
 
-  showSidebar() {
+  showSidebar = () => {
     this.setState({ sidebar: !this.state.sidebar });
-  }
+  };
 
-  handleScrollToHome() {
+  handleScrollToHome = () => {
+    this.setState({ sidebar: false });
     this.props.refProp.current.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
-    this.setState({ sidebar: false });
-  }
+  };
 
-  handleScrollToInstructions() {
+  handleScrollToInstructions = () => {
+    this.setState({ sidebar: false });
     this.props.refProp2.current.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
-    this.setState({ sidebar: false });
-  }
+  };
 
   scrollToBottom = () => {
     const height = document.body.scrollHeight;
@@ -50,32 +50,29 @@ export default class Header extends React.Component {
     return (
       <div>
         <div className="navbar">
-          <div className="menu-bars">
-            <IoIcons.IoMdMenu onClick={() => this.showSidebar()} />
-          </div>
           <a href="/home">
             <img alt="logo" src="" className="navbar-logo"></img>
           </a>
           <div className="navbar-right">
-            <a className="header-link">
+            <Link to="/" className="header-link">
               <button
                 onClick={() => this.handleScrollToHome()}
                 className="header-button"
               >
                 Home
               </button>
-            </a>
-            <a className="header-link">
+            </Link>
+            <div className="header-link">
               <button
                 onClick={() => this.handleScrollToInstructions()}
                 className="header-button"
               >
                 Instructions
               </button>
-            </a>
-            <a className="header-link" onClick={() => this.scrollToBottom()}>
+            </div>
+            <div className="header-link" onClick={() => this.scrollToBottom()}>
               <button className="header-button">To Bottom</button>
-            </a>
+            </div>
             <a className="header-link" href="https://app.optiwing.com/register">
               <button className="header-button">Login</button>
             </a>
@@ -88,33 +85,64 @@ export default class Header extends React.Component {
                   <span className="button-front">Try it For Free</span>
                 </button>
               </a>
+              <div className="menu-bars">
+                <IoIcons.IoMdMenu onClick={() => this.showSidebar()} />
+              </div>
             </div>
           </div>
         </div>
         <nav className={this.state.sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={() => this.showSidebar()}>
             <li className="navbar-toggle">
-              <div className="menu-bars">
+              <div className="menu-close">
                 <IoIcons.IoMdClose />
               </div>
             </li>
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  {item.path ? (
-                    <a href={item.path}>
-                      {item.icon}
-                      <span className="sidebar-item-title">{item.title}</span>
-                    </a>
-                  ) : (
-                    <a href={item.href}>
-                      {item.icon}
-                      <span className="sidebar-item-title">{item.title}</span>
-                    </a>
-                  )}
-                </li>
-              );
-            })}
+            <li className="nav-text">
+              <div
+                className="navbar-child"
+                onClick={() => this.handleScrollToHome()}
+              >
+                <AiIcons.AiFillHome />
+                <span className="sidebar-item-title">Home</span>
+              </div>
+            </li>
+            <li className="nav-text">
+              <div
+                className="navbar-child"
+                onClick={() => this.handleScrollToInstructions()}
+              >
+                <AiIcons.AiFillInfoCircle />
+                <span className="sidebar-item-title">Instructions</span>
+              </div>
+            </li>
+            <li className="nav-text">
+              <div
+                className="navbar-child"
+                onClick={() => this.scrollToBottom()}
+              >
+                <IoIcons.IoMdDocument />
+                <span className="sidebar-item-title">To Bottom</span>
+              </div>
+            </li>
+            <li className="nav-text">
+              <a
+                className="navbar-child"
+                href="https://app.optiwing.com/register"
+              >
+                <IoIcons.IoMdLogIn />
+                <span className="sidebar-item-title">Login</span>
+              </a>
+            </li>
+            <li className="nav-text">
+              <a
+                className="navbar-child"
+                href="https://app.optiwing.com/register"
+              >
+                <AiIcons.AiFillDollarCircle />
+                <span className="sidebar-item-title">Try it for Free!</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

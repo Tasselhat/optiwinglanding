@@ -32,7 +32,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 2rem;
 }
 
 .navbar-logo {
@@ -48,7 +47,21 @@
   align-self: center;
 }
 
+.nav-link {
+  color: var(--white);
+  text-decoration: none;
+  align-self: center;
+}
+
 .menu-bars {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 3rem;
+  background: none;
+  cursor: pointer;
+}
+
+.menu-close {
   margin-left: 2rem;
   margin-right: 2rem;
   font-size: 3rem;
@@ -95,9 +108,9 @@
   height: 60px;
 }
 
-.nav-text a {
+.navbar-child {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   cursor: pointer;
   font-size: 16px;
   width: 95%;
@@ -108,7 +121,7 @@
   border-radius: 4px;
 }
 
-.nav-text a:hover {
+.navbar-child:hover {
   background-color: darkslategray;
 }
 
@@ -181,7 +194,8 @@
   text-transform: none;
   line-height: 1.6em;
   background: transparent;
-  border: solid var(--white) 3px;
+  position: relative;
+  border: solid transparent 3px;
   color: var(--white);
   cursor: pointer;
   border-radius: 10px;
@@ -189,8 +203,27 @@
   margin-right: 0.4vw;
   margin-left: 0.4vw;
   white-space: nowrap;
-  transition: background-color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.3s,
-    color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.3s, padding 200ms, margin 200ms;
+  transition: transform cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s,
+    background-color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s,
+    color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s, padding 0.2s, margin 0.2s;
+}
+
+.header-button::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 10px);
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 10px;
+  left: 5px;
+  background-color: var(--electricblue);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.header-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .header-button:hover {
@@ -263,6 +296,12 @@
 
 @media screen and (max-width: 1000px) {
   .header-link {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .menu-bars {
     display: none;
   }
 }

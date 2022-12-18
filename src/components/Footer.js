@@ -10,18 +10,35 @@ import { ReactComponent as InstagramLogo } from "../images/instagram.svg";
 import "../css/Footer.css";
 
 class Footer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+  handleScrollToHome = () => {
+    this.props.refProp.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  handleScrollToInstructions = () => {
+    this.props.refProp2.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   render() {
     return (
       <footer id="footer" className="footer-box">
         <div className="footer-row">
           <div className="footer-column">
             <div className="footer-column-content">
-              <h3>Shasta Gymnastics and Sport Center</h3>
+              <h3>Copyright 2022 Optiwing.</h3>
               <br />
-              <p className="footer-title">
-                <AiIcons.AiFillPushpin />
-                &nbsp;2629 Bechelli Ln, Redding, CA 96002
-              </p>
+              <p className="footer-title">All rights reserved.</p>
               <div className="line"></div>
               <div className="padding-bottom-24">
                 <p>Website made by Tim Schneider</p>
@@ -46,24 +63,35 @@ class Footer extends Component {
               <div className="line"></div>
               <ul>
                 <li className="list-item">
-                  <a to="/" className="footer-link">
+                  <Link
+                    to="/"
+                    className="footer-link"
+                    onClick={() => this.handleScrollToHome()}
+                  >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <a to="/About" className="footer-link">
-                    About
-                  </a>
+                  <Link
+                    to="/"
+                    className="footer-link"
+                    onClick={() => this.handleScrollToInstructions()}
+                  >
+                    Instructions
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <a to="/Contact" className="footer-link">
+                  <a
+                    href="mailto:tim.b.schneider@gmail.com "
+                    className="footer-link"
+                  >
                     Contact
                   </a>
                 </li>
                 <li className="list-item">
-                  <a to="/location" className="footer-link">
-                    Map
-                  </a>
+                  <Link to="/privacy-policy" className="footer-link">
+                    Privacy Policy
+                  </Link>
                 </li>
                 <li className="list-item"></li>
               </ul>
@@ -73,11 +101,6 @@ class Footer extends Component {
             <div className="footer-column-content">
               <div className="line"></div>
               <ul>
-                <li className="list-item">Our business hours are:</li>
-                <li className="list-item">Monday: 3:00p - 7:00p</li>
-                <li className="list-item">Tuesday: 3:00p - 7:00p</li>
-                <li className="list-item">Wednesday: 3:00p - 7:00p</li>
-                <li className="list-item">Thursday: 3:00p - 7:00p</li>
                 <li className="list-item">
                   <button
                     className="scroll-button"
@@ -94,40 +117,43 @@ class Footer extends Component {
           <div className="footer-column">
             <div className="footer-column-content">
               <div className="line"></div>
-              <a to="/Contact" className="footer-link padding-bottom-24">
+              <a
+                href="mailto:tim.b.schneider@gmail.com"
+                className="footer-link padding-bottom-24"
+              >
                 <u>Contact Us</u>
               </a>
               <a
-                href="mailto: shastagymnasticsmedia@gmail.com"
+                href="mailto: info@optiwing.com"
                 className="footer-link padding-bottom-24"
               >
                 <AiIcons.AiFillMail />
-                &nbsp;shastagymnasticsmedia@gmail.com
+                &nbsp;info@optiwing.com
               </a>
               <a
                 href="tel:5302299194"
                 className="footer-link padding-bottom-24"
               >
                 <AiIcons.AiFillPhone />
-                &nbsp;(530)-229-9194
+                &nbsp;(555)-516-7078
               </a>
               <div className="line"></div>
               <div>
                 <a
                   className="icon-footer icon--fill"
-                  href="https://www.facebook.com/shastagymnasticsacademy/"
+                  href="https://www.facebook.com/optiwing/"
                 >
                   <FacebookLogo />
                 </a>
                 <a
                   className="icon-footer icon--fill"
-                  href="https://www.instagram.com/shastagymnastics/"
+                  href="https://www.instagram.com/optiwing/"
                 >
                   <InstagramLogo />
                 </a>
                 <a
                   className="icon-footer icon--fill"
-                  href="mailto: shastagymnasticsmedia@gmail.com"
+                  href="mailto: tim.b.schneider@gmail.com"
                 >
                   <GmailLogo />
                 </a>
