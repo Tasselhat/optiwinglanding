@@ -45,7 +45,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 500px;
+  min-height: 500px;
   position: relative;
   padding: 20px;
   box-sizing: border-box;
@@ -114,75 +114,23 @@ ul {
   margin-left: 1.2rem;
 }
 
-li {
+.the-why-wrapper li {
   margin-left: 1.2rem;
   padding-bottom: 1rem;
 }
 
 .title {
+  padding: 0 0 20px 0 !important;
   font-size: 47px !important;
   font-weight: 600;
   color: var(--white);
 }
 
 .title-secondary {
+  padding: 0 0 20px 0 !important;
   font-size: 18px;
   font-weight: 600;
   color: var(--white);
-}
-
-@media (min-width: 1081px) {
-  .instructions {
-    display: grid;
-    grid-template-areas: "step-1 step-2 step-3";
-    gap: 0.5vw 1vw;
-    align-content: space-between;
-  }
-}
-
-@media (max-width: 1080px) {
-  .title {
-    font-size: 40px !important;
-  }
-
-  .instructions {
-    display: grid;
-    grid-template-areas:
-      "step-1 step-2"
-      "step-3 step-3";
-    gap: 0.5vw 1vw;
-    align-items: start;
-    align-content: space-between;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 767px) {
-  .title {
-    font-size: 30px !important;
-  }
-
-  .instructions {
-    display: grid;
-    grid-template-areas:
-      "step-1"
-      "step-2"
-      "step-3";
-    gap: 0.5vw 1vw;
-    align-items: start;
-    align-content: space-between;
-    justify-content: center;
-  }
-}
-
-#step-1 {
-  grid-area: step-1;
-}
-#step-2 {
-  grid-area: step-2;
-}
-#step-3 {
-  grid-area: step-3;
 }
 
 .electricblue {
@@ -269,10 +217,129 @@ li {
   min-height: 40px;
 }
 
+#step-1 {
+  grid-area: step-1;
+}
+#step-2 {
+  grid-area: step-2;
+}
+#step-3 {
+  grid-area: step-3;
+}
+
+#card1 {
+  grid-area: card1;
+}
+#card2 {
+  grid-area: card2;
+}
+#card3 {
+  grid-area: card3;
+}
+#card4 {
+  grid-area: card4;
+}
+#card5 {
+  grid-area: card5;
+}
+#card6 {
+  grid-area: card6;
+}
+
+@media (min-width: 1081px) {
+  .info-card {
+    min-width: 200px;
+  }
+
+  .instruction-card {
+    max-width: 400px;
+  }
+
+  .instructions {
+    display: grid;
+    grid-template-areas: "step-1 step-2 step-3";
+    gap: 0.5vw 1vw;
+    align-content: space-around;
+  }
+
+  .info-cards-grid {
+    display: grid;
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6";
+    gap: 0;
+    align-content: space-around;
+  }
+}
+
+@media (max-width: 1080px) {
+  .title {
+    font-size: 40px !important;
+  }
+
+  .instructions {
+    display: grid;
+    grid-template-areas:
+      "step-1 step-2"
+      "step-3 step-3";
+    gap: 0.5vw 1vw;
+    align-items: start;
+    align-content: space-between;
+    justify-content: center;
+  }
+
+  .info-cards-grid {
+    display: grid;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card3"
+      "card4 card5"
+      "card6 card6";
+    gap: 0;
+    align-items: start;
+    align-content: space-between;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 30px !important;
+  }
+
+  .instructions {
+    display: grid;
+    grid-template-areas:
+      "step-1"
+      "step-2"
+      "step-3";
+    gap: 0.5vw 1vw;
+    align-items: start;
+    align-content: space-between;
+    justify-content: center;
+  }
+
+  .info-cards-grid {
+    display: grid;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6";
+    gap: 0;
+    align-items: start;
+    align-content: space-between;
+    justify-content: center;
+  }
+}
+
 .instructions {
   justify-content: center;
   margin-right: 3vw;
   margin-left: 3vw;
+  margin-bottom: 3vw;
 }
 
 .instruction-card {
@@ -281,21 +348,62 @@ li {
   margin: 20px;
   border: 1px solid #333;
   border-radius: 5px;
-  box-shadow: -1rem 0 3rem #000;
+  box-shadow: -1rem 0 3rem rgb(99, 99, 99);
   background-color: #fffdfa;
 }
 
 .instruction-card-title {
   width: fit-content;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 800;
   margin-bottom: 10px;
-  padding: 20px 27px;
+  padding: 19px 27px;
   background-color: #559db3be;
 }
 
 .instruction-card-p {
   font-size: 18px;
   padding: 40px 20px 20px 20px;
+}
+
+.info-title {
+  margin: 20px;
+}
+
+.info-cards-grid {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: center;
+  margin-right: 15vw;
+  margin-left: 15vw;
+  margin-bottom: 3vw;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 200px;
+  min-height: 300px;
+  margin: 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: -2px 1px 10px 0px rgb(117, 117, 117);
+  background-color: #fffdfa;
+}
+
+.info-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px;
+  white-space: pre-wrap;
+}
+
+.info-card-p {
+  font-size: 18px;
+  padding: 20px;
+  white-space: pre-wrap;
 }
 
 .text-center {

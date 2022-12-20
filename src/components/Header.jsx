@@ -11,7 +11,6 @@ export default class Header extends React.Component {
 
     this.state = {
       sidebar: false,
-      isHovering: false,
     };
   }
 
@@ -85,9 +84,9 @@ export default class Header extends React.Component {
                   <span className="button-front">Try it For Free</span>
                 </button>
               </a>
-              <div className="menu-bars">
-                <IoIcons.IoMdMenu onClick={() => this.showSidebar()} />
-              </div>
+            </div>
+            <div className="menu-bars">
+              <AiIcons.AiOutlineMenu onClick={() => this.showSidebar()} />
             </div>
           </div>
         </div>
@@ -95,17 +94,18 @@ export default class Header extends React.Component {
           <ul className="nav-menu-items" onClick={() => this.showSidebar()}>
             <li className="navbar-toggle">
               <div className="menu-close">
-                <IoIcons.IoMdClose />
+                <AiIcons.AiFillCloseCircle />
               </div>
             </li>
             <li className="nav-text">
-              <div
+              <Link
+                to="/"
                 className="navbar-child"
                 onClick={() => this.handleScrollToHome()}
               >
                 <AiIcons.AiFillHome />
                 <span className="sidebar-item-title">Home</span>
-              </div>
+              </Link>
             </li>
             <li className="nav-text">
               <div

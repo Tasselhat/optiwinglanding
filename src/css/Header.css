@@ -11,18 +11,13 @@
 }
 
 .navbar svg {
-  filter: brightness(0) saturate(100%) invert(86%) sepia(13%) saturate(165%)
-    hue-rotate(175deg) brightness(92%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(165%)
+    hue-rotate(175deg) brightness(97%) contrast(98%);
 }
 
 .nav-menu svg {
-  filter: brightness(0) saturate(100%) invert(86%) sepia(13%) saturate(165%)
-    hue-rotate(175deg) brightness(92%) contrast(98%);
-}
-
-.profile-menu svg {
-  filter: brightness(0) saturate(100%) invert(86%) sepia(13%) saturate(165%)
-    hue-rotate(175deg) brightness(92%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(98%) sepia(13%) saturate(165%)
+    hue-rotate(175deg) brightness(97%) contrast(98%);
 }
 
 .navbar-right {
@@ -54,47 +49,37 @@
 }
 
 .menu-bars {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   font-size: 3rem;
   background: none;
   cursor: pointer;
 }
 
 .menu-close {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   font-size: 3rem;
   background: none;
   cursor: pointer;
 }
 
-.home-icon {
-  font-size: 32px;
-  background: none;
-}
-
-.profile-icon {
-  margin: 0 2rem 0 2rem;
-  font-size: 32px;
-  background: none;
-}
-
 .nav-menu {
-  background: linear-gradient(00.25turn, #333, 11%, var(--electricblue));
+  background: linear-gradient(00.25turn, silver, 11%, #333);
+  box-shadow: -5px 4px 7px 0px rgb(0 0 0 / 22%);
   width: 250px;
   height: 10px;
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
-  left: -100%;
+  right: -100%;
   transition: 500ms;
   z-index: 1000;
 }
 
 .nav-menu.active {
-  left: 0;
+  right: 0;
   height: 100vh;
   transition: 350ms;
 }
@@ -103,26 +88,66 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 8px 0px 8px 16px;
   list-style: none;
   height: 60px;
+  margin: 4px;
 }
 
 .navbar-child {
   text-decoration: none;
-  color: var(--white);
-  cursor: pointer;
-  font-size: 16px;
   width: 95%;
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 16px;
-  border-radius: 4px;
+  padding: 4px 8px;
+  font-weight: 600;
+  font-style: normal;
+  font-size: calc(0.2 * 1vw + 1rem);
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.6em;
+  background: transparent;
+  position: relative;
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 18px;
+  white-space: nowrap;
+  transition: transform cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s,
+    background-color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s,
+    color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s;
+}
+
+.navbar-child::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 80px);
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 7px;
+  left: 41px;
+  background-color: var(--electricblue);
+  transform-origin: bottom right;
+  transition: transform 0.22s ease-out;
+}
+
+.navbar-child:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .navbar-child:hover {
-  background-color: darkslategray;
+  background-color: var(--white);
+  color: var(--electricblue);
+  opacity: 0.9;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+}
+.navbar-child:hover svg {
+  filter: brightness(0) saturate(22%) invert(100%) sepia(13%) saturate(154%)
+    hue-rotate(175deg) brightness(23%) contrast(90%);
+}
+
+.navbar-child:active {
+  opacity: 0.6;
 }
 
 .nav-menu-items {
@@ -205,7 +230,7 @@
   white-space: nowrap;
   transition: transform cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s,
     background-color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s,
-    color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s, padding 0.2s, margin 0.2s;
+    color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s;
 }
 
 .header-button::after {
@@ -214,7 +239,7 @@
   width: calc(100% - 10px);
   transform: scaleX(0);
   height: 2px;
-  bottom: 10px;
+  bottom: 9px;
   left: 5px;
   background-color: var(--electricblue);
   transform-origin: bottom right;
@@ -236,12 +261,6 @@
 
 .header-button:active {
   opacity: 0.6;
-}
-
-/* parent portal buttons */
-
-.redirect-buttons {
-  margin: 0 1rem 0 1rem;
 }
 
 .navbar-right a.nomargin {

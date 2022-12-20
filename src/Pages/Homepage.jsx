@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Cards from "../components/Cards";
 import { useRef } from "react";
+import * as FaIcons from "react-icons/fa";
 
 import "../css/Homepage.css";
 
@@ -117,6 +118,86 @@ export default function Homepage() {
                   alternatively this will be available to download as an Excel
                   file. No guess work required, just raw keyword insights from
                   real-time Google data.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="info-wrapper">
+          <div className="info-container">
+            <div align="center" className="info-title">
+              <h1>What separates Optiwing?</h1>
+            </div>
+            <div className="info-cards-grid">
+              <div className="info-card" id="card1">
+                <FaIcons.FaLightbulb
+                  style={{ margin: "20px", fontSize: "28px" }}
+                />
+                <div className="info-card-title">
+                  <h1>Keyword Mapping</h1>
+                </div>
+                <p className="info-card-p">
+                  100% accurate keyword mapping, generate lightning fast insight
+                  on which keywords you can target with a single page.
+                </p>
+              </div>
+              <div className="info-card" id="card2">
+                <FaIcons.FaGlobeAmericas
+                  style={{ margin: "20px", fontSize: "28px" }}
+                />
+                <div className="info-card-title">
+                  <h1>Localized Results</h1>
+                </div>
+                <p className="info-card-p">
+                  Run your analysis for any country, language or device (desktop
+                  or mobile), to cluster topics with precision.
+                </p>
+              </div>
+              <div className="info-card" id="card3">
+                <FaIcons.FaRecycle
+                  style={{ margin: "20px", fontSize: "28px" }}
+                />
+                <div className="info-card-title">
+                  <h1>Monthly Credit Rollover</h1>
+                </div>
+                <p className="info-card-p">
+                  No more wasting credits each month, credits roll over each
+                  month so you don't have to worry about breaks.
+                </p>
+              </div>
+              <div className="info-card" id="card4">
+                <FaIcons.FaSun style={{ margin: "20px", fontSize: "28px" }} />
+                <div className="info-card-title">
+                  <h1>Fast and beautiful results</h1>
+                </div>
+                <p className="info-card-p">
+                  Get your keyword grouping output in the browser within
+                  minutes. Results generated in real time, and no need to sift
+                  through bland spreadsheet files, unless you want to!
+                </p>
+              </div>
+              <div className="info-card" id="card5">
+                <FaIcons.FaThumbsUp
+                  style={{ margin: "20px", fontSize: "28px" }}
+                />
+                <div className="info-card-title">
+                  <h1>Credits Never Expire</h1>
+                </div>
+                <p className="info-card-p">
+                  Whatever you receive from your plan is yours to use and will
+                  never expire, no need to worry about unused credits.
+                </p>
+              </div>
+              <div className="info-card" id="card6">
+                <FaIcons.FaFileAlt
+                  style={{ margin: "20px", fontSize: "28px" }}
+                />
+                <div className="info-card-title">
+                  <h1>Multiple File Formats</h1>
+                </div>
+                <p className="info-card-p">
+                  We support keyword export files from Ahrefs and SemRush as
+                  well as a custom file upload.
                 </p>
               </div>
             </div>
