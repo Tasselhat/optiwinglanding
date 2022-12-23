@@ -203,8 +203,320 @@ export default function Homepage() {
             </div>
           </div>
         </div>
+        <div className="pricing-wrapper">
+          <div className="pricing-background-div"></div>
+          <div className="pricing-container">
+            <div className="pricing-title">
+              <h1>Pricing Options</h1>
+            </div>
+            <div className="pricing-desc">
+              <p>
+                We offer Multiple monthly pricing options. Whether you need to
+                complete a one-off keyword research project or you need to
+                analyze 100,000s of keywords, we've got a solution for you.
+              </p>
+              <p>Upgrade at any time!</p>
+            </div>
+            <div className="pricing-card-grid">
+              <div className="pricing-card" id="pcard1">
+                <div className="pricing-card-title">
+                  <h3>Basic</h3>
+                  <hr></hr>
+                </div>
+                <div className="pricing-card-price">
+                  <h1>$9</h1>
+                </div>
+                <div className="pricing-styled-list">
+                  <ul>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>1,000 Keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>$9.00 per 1,000 keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits rollover</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits never expire</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pricing-redirect-button">
+                  <button
+                    onClick={() => {
+                      window.location.href =
+                        "https://app.optiwing.com/register";
+                    }}
+                    className="redirect-button"
+                  >
+                    <span>Try it for free</span>
+                    <span>
+                      <FaIcons.FaCaretRight />
+                    </span>
+                  </button>
+                </div>
+                <div className="pricing-caveat-text">
+                  <p>No Credit Card Required</p>
+                </div>
+              </div>
+              <div className="pricing-card" id="pcard2">
+                <div className="pricing-card-title">
+                  <h3>Personal</h3>
+                  <hr></hr>
+                </div>
+                <div className="pricing-card-price">
+                  <h1>$19</h1>
+                </div>
+                <div className="pricing-styled-list">
+                  <ul>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>2,500 Keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>$7.60 per 1,000 keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits rollover</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits never expire</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pricing-redirect-button">
+                  <button
+                    onClick={() => {
+                      window.location.href =
+                        "https://app.optiwing.com/register";
+                    }}
+                    className="redirect-button"
+                  >
+                    <span>Try it for free</span>
+                    <span>
+                      <FaIcons.FaCaretRight />
+                    </span>
+                  </button>
+                </div>
+                <div className="pricing-caveat-text">
+                  <p>No Credit Card Required</p>
+                </div>
+              </div>
+              <div className="pricing-card" id="pcard3">
+                <div className="pricing-card-title">
+                  <h3>Freelancer</h3>
+                  <hr></hr>
+                </div>
+                <div className="pricing-card-price">
+                  <h1>$35</h1>
+                </div>
+                <div className="pricing-styled-list">
+                  <ul>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>5,000 Keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>$7.00 per 1,000 keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits rollover</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits never expire</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pricing-redirect-button">
+                  <button
+                    onClick={() => {
+                      window.location.href =
+                        "https://app.optiwing.com/register";
+                    }}
+                    className="redirect-button"
+                  >
+                    <span>Try it for free</span>
+                    <span>
+                      <FaIcons.FaCaretRight />
+                    </span>
+                  </button>
+                </div>
+                <div className="pricing-caveat-text">
+                  <p>No Credit Card Required</p>
+                </div>
+              </div>
+              <div className="pricing-card" id="pcard4">
+                <div className="pricing-card-title">
+                  <h3>Founder</h3>
+                  <hr></hr>
+                </div>
+                <div className="pricing-card-price">
+                  <h1>$59</h1>
+                </div>
+                <div className="pricing-styled-list">
+                  <ul>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>10,000 Keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>$5.90 per 1,000 keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits rollover</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits never expire</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pricing-redirect-button">
+                  <button
+                    onClick={() => {
+                      window.location.href =
+                        "https://app.optiwing.com/register";
+                    }}
+                    className="redirect-button"
+                  >
+                    <span>Try it for free</span>
+                    <span>
+                      <FaIcons.FaCaretRight />
+                    </span>
+                  </button>
+                </div>
+                <div className="pricing-caveat-text">
+                  <p>No Credit Card Required</p>
+                </div>
+              </div>
+              <div className="pricing-card" id="pcard5">
+                <div className="pricing-card-title">
+                  <h3>Consultant</h3>
+                  <hr></hr>
+                </div>
+                <div className="pricing-card-price">
+                  <h1>$110</h1>
+                </div>
+                <div className="pricing-styled-list">
+                  <ul>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>20,000 Keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>$5.50 per 1,000 keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits rollover</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits never expire</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pricing-redirect-button">
+                  <button
+                    onClick={() => {
+                      window.location.href =
+                        "https://app.optiwing.com/register";
+                    }}
+                    className="redirect-button"
+                  >
+                    <span>Try it for free</span>
+                    <span>
+                      <FaIcons.FaCaretRight />
+                    </span>
+                  </button>
+                </div>
+                <div className="pricing-caveat-text">
+                  <p>No Credit Card Required</p>
+                </div>
+              </div>
+              <div className="pricing-card" id="pcard6">
+                <div className="pricing-card-title">
+                  <h3>Agency</h3>
+                  <hr></hr>
+                </div>
+                <div className="pricing-card-price">
+                  <h1>$199</h1>
+                </div>
+                <div className="pricing-styled-list">
+                  <ul>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>40,000 Keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>$4.98 per 1,000 keywords</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits rollover</span>
+                    </li>
+                    <li className="pricing-styled-list-item">
+                      <FaIcons.FaCheck style={{ margin: "10px" }} />
+                      <span>Credits never expire</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pricing-redirect-button">
+                  <button
+                    onClick={() => {
+                      window.location.href =
+                        "https://app.optiwing.com/register";
+                    }}
+                    className="redirect-button"
+                  >
+                    <span>Try it for free</span>
+                    <span>
+                      <FaIcons.FaCaretRight />
+                    </span>
+                  </button>
+                </div>
+                <div className="pricing-caveat-text">
+                  <p>No Credit Card Required</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="call-to-action-wrapper">
+          <div className="call-to-action-background-div"></div>
+          <div className="call-to-action">
+            <h1 align="center" className="call-to-action-h1">
+              Start generating keyword maps today!
+            </h1>
+            <button
+              onClick={() => {
+                window.location.href = "https://app.optiwing.com/register";
+              }}
+              className="call-to-action-button"
+            >
+              <span>Claim your free credits now</span>
+              <span>
+                <FaIcons.FaCaretRight />
+              </span>
+            </button>
+          </div>
+        </div>
       </section>
-      <h1 className="photo-reel-h1 text-center">Photo Reel</h1>
       <Footer refProp={homeRef} refProp2={instructionsRef} />
     </main>
   );

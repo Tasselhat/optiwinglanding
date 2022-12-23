@@ -15,7 +15,6 @@
 
 .footer-row {
   width: 100%;
-  flex: 1fr;
   display: grid;
   grid-column-start: 1;
   grid-row-start: 1;
