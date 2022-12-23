@@ -1,14 +1,3 @@
-.footer-background-overlay {
-  width: 100%;
-  margin-top: auto;
-  padding: 4vw 48px;
-  position: relative;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: linear-gradient(rgba(24, 43, 73, 0), #182b49);
-}
-
 .footer-box {
   max-width: 100vw;
   margin-top: auto;
@@ -20,7 +9,7 @@
   left: 0;
   line-height: 1;
   justify-content: space-evenly;
-  background-color: #fffdfa;
+  background-color: var(--white);
   overflow: hidden;
 }
 

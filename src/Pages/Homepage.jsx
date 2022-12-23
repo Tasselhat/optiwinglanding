@@ -14,7 +14,7 @@ export default function Homepage() {
   return (
     <main>
       <Header refProp={homeRef} refProp2={instructionsRef} />
-      <section className="homepage-section-containter">
+      <section className="homepage-section-container">
         <div className="title-wrapper">
           <div className="title-background"></div>
           <div className="title-container">
@@ -172,8 +172,8 @@ export default function Homepage() {
                 </div>
                 <p className="info-card-p">
                   Get your keyword grouping output in the browser within
-                  minutes. Results generated in real time, and no need to sift
-                  through bland spreadsheet files, unless you want to!
+                  minutes. Results generated in real time, with the option to
+                  download results as a csv file.
                 </p>
               </div>
               <div className="info-card" id="card5">

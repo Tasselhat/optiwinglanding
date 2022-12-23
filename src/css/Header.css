@@ -112,9 +112,9 @@
   cursor: pointer;
   border-radius: 18px;
   white-space: nowrap;
-  transition: transform cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s,
-    background-color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s,
-    color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s;
+  transition: transform cubic-bezier(0.68, 0.19, 0.7, 0.96) 200ms,
+    background-color cubic-bezier(0.68, 0.19, 0.7, 0.96) 200ms,
+    color cubic-bezier(0.68, 0.19, 0.7, 0.96) 200ms;
 }
 
 .navbar-child::after {
@@ -127,7 +127,7 @@
   left: 41px;
   background-color: var(--electricblue);
   transform-origin: bottom right;
-  transition: transform 0.22s ease-out;
+  transition: transform 200ms ease-out;
 }
 
 .navbar-child:hover::after {
@@ -141,6 +141,7 @@
   opacity: 0.9;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
 }
+
 .navbar-child:hover svg {
   filter: brightness(0) saturate(22%) invert(100%) sepia(13%) saturate(154%)
     hue-rotate(175deg) brightness(23%) contrast(90%);
@@ -165,26 +166,6 @@
 
 .navbar-toggle a {
   color: white;
-}
-
-.profile-menu {
-  background: linear-gradient(#0a0a29, #000033);
-  width: 250px;
-  margin-top: 80px;
-  height: 0px;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  transition: 500ms;
-  border-radius: 0px 0px 10px 10px;
-}
-
-.profile-menu.active {
-  right: 0;
-  height: 250px;
-  transition: 350ms;
 }
 
 .profile-menu-items {
@@ -228,9 +209,9 @@
   margin-right: 0.4vw;
   margin-left: 0.4vw;
   white-space: nowrap;
-  transition: transform cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s,
-    background-color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s,
-    color cubic-bezier(0.68, 0.19, 0.7, 0.96) 0.2s;
+  transition: transform cubic-bezier(0.68, 0.19, 0.7, 0.96) 200ms,
+    background-color cubic-bezier(0.68, 0.19, 0.7, 0.96) 200ms,
+    color cubic-bezier(0.68, 0.19, 0.7, 0.96) 200ms;
 }
 
 .header-button::after {

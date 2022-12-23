@@ -19,19 +19,19 @@ export default class Header extends React.Component {
   };
 
   handleScrollToHome = () => {
-    this.setState({ sidebar: false });
     this.props.refProp.current.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
+    this.setState({ sidebar: false });
   };
 
   handleScrollToInstructions = () => {
-    this.setState({ sidebar: false });
     this.props.refProp2.current.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
+    this.setState({ sidebar: false });
   };
 
   scrollToBottom = () => {
@@ -61,17 +61,22 @@ export default class Header extends React.Component {
                 Home
               </button>
             </Link>
-            <div className="header-link">
+            <Link to="/" className="header-link">
               <button
                 onClick={() => this.handleScrollToInstructions()}
                 className="header-button"
               >
                 Instructions
               </button>
-            </div>
-            <div className="header-link" onClick={() => this.scrollToBottom()}>
-              <button className="header-button">To Bottom</button>
-            </div>
+            </Link>
+            <Link to="/" className="header-link">
+              <button
+                onClick={() => this.scrollToBottom()}
+                className="header-button"
+              >
+                To Bottom
+              </button>
+            </Link>
             <a className="header-link" href="https://app.optiwing.com/register">
               <button className="header-button">Login</button>
             </a>
