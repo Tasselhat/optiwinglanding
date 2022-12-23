@@ -34,6 +34,14 @@ export default class Header extends React.Component {
     this.setState({ sidebar: false });
   };
 
+  handleScrollToPricing = () => {
+    this.props.refProp3.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+    this.setState({ sidebar: false });
+  };
+
   scrollToBottom = () => {
     const height = document.body.scrollHeight;
 
@@ -67,6 +75,14 @@ export default class Header extends React.Component {
                 className="header-button"
               >
                 Instructions
+              </button>
+            </Link>
+            <Link to="/" className="header-link">
+              <button
+                onClick={() => this.handleScrollToPricing()}
+                className="header-button"
+              >
+                Pricing
               </button>
             </Link>
             <Link to="/" className="header-link">
@@ -113,13 +129,24 @@ export default class Header extends React.Component {
               </Link>
             </li>
             <li className="nav-text">
-              <div
+              <Link
+                to="/"
                 className="navbar-child"
                 onClick={() => this.handleScrollToInstructions()}
               >
                 <AiIcons.AiFillInfoCircle />
                 <span className="sidebar-item-title">Instructions</span>
-              </div>
+              </Link>
+            </li>
+            <li className="nav-text">
+              <Link
+                to="/"
+                className="navbar-child"
+                onClick={() => this.handleScrollToPricing()}
+              >
+                <AiIcons.AiFillDollarCircle />
+                <span className="sidebar-item-title">Pricing</span>
+              </Link>
             </li>
             <li className="nav-text">
               <div
@@ -144,7 +171,7 @@ export default class Header extends React.Component {
                 className="navbar-child"
                 href="https://app.optiwing.com/register"
               >
-                <AiIcons.AiFillDollarCircle />
+                <AiIcons.AiFillRightCircle />
                 <span className="sidebar-item-title">Try it for Free!</span>
               </a>
             </li>

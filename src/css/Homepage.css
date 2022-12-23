@@ -229,8 +229,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-width: 200px;
+  min-width: 300px;
   min-height: 300px;
+  height: 90%;
   margin: 20px;
   border: 1px solid #333;
   border-radius: 8px;
@@ -321,15 +322,10 @@
       "card1 card2 card3"
       "card4 card5 card6";
     gap: 0;
-    align-content: space-around;
   }
 }
 
 @media (min-width: 1081px) {
-  .info-card {
-    min-width: 200px;
-  }
-
   .instruction-card {
     max-width: 400px;
   }
@@ -338,7 +334,6 @@
     display: grid;
     grid-template-areas: "step-1 step-2 step-3";
     gap: 0.5vw 1vw;
-    align-content: space-around;
   }
 
   .pricing-card-grid {
@@ -347,7 +342,6 @@
       "pcard1 pcard2 pcard3"
       "pcard4 pcard5 pcard6";
     gap: 0;
-    align-content: space-around;
   }
 }
 
@@ -361,7 +355,6 @@
       "card6 card6";
     gap: 0;
     align-items: start;
-    align-content: space-between;
     justify-content: center;
   }
 }
@@ -378,7 +371,6 @@
       "step-3 step-3";
     gap: 0.5vw 1vw;
     align-items: start;
-    align-content: space-between;
     justify-content: center;
   }
 
@@ -390,7 +382,6 @@
       "pcard5 pcard6";
     gap: 0;
     align-items: start;
-    align-content: space-between;
     justify-content: center;
   }
 }
@@ -408,7 +399,6 @@
       "step-3";
     gap: 0.5vw 1vw;
     align-items: start;
-    align-content: space-between;
     justify-content: center;
   }
 
@@ -423,7 +413,6 @@
       "card6";
     gap: 0;
     align-items: start;
-    align-content: space-between;
     justify-content: center;
   }
 
@@ -438,15 +427,14 @@
       "pcard6";
     gap: 0;
     align-items: start;
-    align-content: space-between;
     justify-content: center;
   }
 }
 
 .instructions {
   justify-content: center;
-  margin-right: 3vw;
-  margin-left: 3vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
   margin-bottom: 2vw;
 }
 
@@ -508,8 +496,8 @@
 .pricing-card-grid {
   align-items: stretch;
   justify-content: center;
-  margin-right: 15vw;
-  margin-left: 15vw;
+  margin-right: 16.5vw;
+  margin-left: 16.5vw;
   margin-bottom: 2vw;
 }
 

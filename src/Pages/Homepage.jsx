@@ -10,10 +10,15 @@ import "../css/Homepage.css";
 export default function Homepage() {
   const homeRef = useRef();
   const instructionsRef = useRef();
+  const pricingRef = useRef();
 
   return (
     <main>
-      <Header refProp={homeRef} refProp2={instructionsRef} />
+      <Header
+        refProp={homeRef}
+        refProp2={instructionsRef}
+        refProp3={pricingRef}
+      />
       <section className="homepage-section-container">
         <div className="title-wrapper">
           <div className="title-background"></div>
@@ -203,7 +208,7 @@ export default function Homepage() {
             </div>
           </div>
         </div>
-        <div className="pricing-wrapper">
+        <div className="pricing-wrapper" ref={pricingRef}>
           <div className="pricing-background-div"></div>
           <div className="pricing-container">
             <div className="pricing-title">
