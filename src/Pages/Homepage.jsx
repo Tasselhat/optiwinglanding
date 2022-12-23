@@ -100,23 +100,44 @@ export default function Homepage() {
             </div>
             <div className="instructions">
               <div className="instruction-card" id="step-1">
-                <div className="instruction-card-title">1</div>
+                <div className="instruction-title-container">
+                  <div className="instruction-card-title">
+                    <h1>1</h1>
+                  </div>
+                  <div className="instruction-card-title-text">
+                    <h3>Upload a File</h3>
+                  </div>
+                </div>
                 <p className="instruction-card-p">
-                  Upload a CSV file of keywords from your favourite keyword
+                  Upload a CSV file of keywords from your favorite keyword
                   research tool such as Ahrefs and SEMRush. Alternatively,
                   upload a custom file.
                 </p>
               </div>
               <div className="instruction-card" id="step-2">
-                <div className="instruction-card-title">2</div>
+                <div className="instruction-title-container">
+                  <div className="instruction-card-title">
+                    <h1>2</h1>
+                  </div>
+                  <div className="instruction-card-title-text">
+                    <h3>Optiwing Runs</h3>
+                  </div>
+                </div>
                 <p className="instruction-card-p">
-                  Optiwing will search for each keyword on Google, analyse the
+                  Optiwing will search for each keyword on Google, analyses the
                   first page of results, and map keywords together that have 3
                   or more of the same pages in common.
                 </p>
               </div>
               <div className="instruction-card" id="step-3">
-                <div className="instruction-card-title">3</div>
+                <div className="instruction-title-container">
+                  <div className="instruction-card-title">
+                    <h1>3</h1>
+                  </div>
+                  <div className="instruction-card-title-text">
+                    <h3>Results in Minutes</h3>
+                  </div>
+                </div>
                 <p className="instruction-card-p">
                   Within a few minutes you'll get live results in the browser
                   with keywords mapped in clusters based on topical connections,
@@ -217,8 +238,8 @@ export default function Homepage() {
             <div className="pricing-desc">
               <p>
                 We offer Multiple monthly pricing options. Whether you need to
-                complete a one-off keyword research project or you need to
-                analyze 100,000s of keywords, we've got a solution for you.
+                complete a one-off project or you need to analyze thousands of
+                keywords, we've got a solution for you.
               </p>
               <p>Upgrade at any time!</p>
             </div>

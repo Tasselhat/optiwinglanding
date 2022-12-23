@@ -447,14 +447,26 @@
   background-color: #fffdfa;
 }
 
+.instruction-title-container {
+  display: flex;
+  align-items: center;
+}
+
 .instruction-card-title {
   width: fit-content;
   font-size: 20px;
   font-weight: 800;
-  margin-bottom: 10px;
   border-radius: 7.3px 0 7.3px 0;
   padding: 19px 27px;
   background-color: #559db3be;
+}
+
+.instruction-card-title-text {
+  font-size: 20px;
+  font-weight: 800;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 12px;
 }
 
 .instruction-card-p {
