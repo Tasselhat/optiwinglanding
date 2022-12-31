@@ -285,7 +285,7 @@ export default function Homepage() {
 											<FaIcons.FaCheck
 												style={{margin: "10px"}}
 											/>
-											<span>1,000 Keywords</span>
+											<span>1,000 Credits</span>
 										</li>
 										<li className="pricing-styled-list-item">
 											<FaIcons.FaCheck
@@ -341,7 +341,7 @@ export default function Homepage() {
 											<FaIcons.FaCheck
 												style={{margin: "10px"}}
 											/>
-											<span>2,500 Keywords</span>
+											<span>2,500 Credits</span>
 										</li>
 										<li className="pricing-styled-list-item">
 											<FaIcons.FaCheck
@@ -397,7 +397,7 @@ export default function Homepage() {
 											<FaIcons.FaCheck
 												style={{margin: "10px"}}
 											/>
-											<span>5,000 Keywords</span>
+											<span>5,000 Credits</span>
 										</li>
 										<li className="pricing-styled-list-item">
 											<FaIcons.FaCheck
@@ -453,7 +453,7 @@ export default function Homepage() {
 											<FaIcons.FaCheck
 												style={{margin: "10px"}}
 											/>
-											<span>10,000 Keywords</span>
+											<span>10,000 Credits</span>
 										</li>
 										<li className="pricing-styled-list-item">
 											<FaIcons.FaCheck
@@ -509,7 +509,7 @@ export default function Homepage() {
 											<FaIcons.FaCheck
 												style={{margin: "10px"}}
 											/>
-											<span>20,000 Keywords</span>
+											<span>20,000 Credits</span>
 										</li>
 										<li className="pricing-styled-list-item">
 											<FaIcons.FaCheck
@@ -565,7 +565,7 @@ export default function Homepage() {
 											<FaIcons.FaCheck
 												style={{margin: "10px"}}
 											/>
-											<span>40,000 Keywords</span>
+											<span>40,000 Credits</span>
 										</li>
 										<li className="pricing-styled-list-item">
 											<FaIcons.FaCheck
