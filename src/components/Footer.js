@@ -36,7 +36,7 @@ class Footer extends Component {
         <div className="footer-row">
           <div className="footer-column">
             <div className="footer-column-content">
-              <h3>Copyright 2022 Optiwing.</h3>
+              <h1 style={{ fontSize: "19px" }}>Copyright 2022 Optiwing.</h1>
               <br />
               <p className="footer-title">All rights reserved.</p>
               <div className="line"></div>
