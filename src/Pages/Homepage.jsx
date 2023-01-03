@@ -7,6 +7,8 @@ import * as FaIcons from "react-icons/fa";
 
 import "../css/Homepage.css";
 
+import LogoImg from "../images/optiwing_logo.png";
+
 export default function Homepage() {
   const homeRef = useRef();
   const instructionsRef = useRef();

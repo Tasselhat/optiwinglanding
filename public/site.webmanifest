@@ -1,5 +1,5 @@
 {
-  "name": "SEO Keyword Grouping Tool Optiwing",
+  "name": "SEO Keyword Grouping Tool",
   "short_name": "Optiwing",
   "icons": [
     {
@@ -18,7 +18,7 @@
       "type": "image/x-icon"
     }
   ],
-  "theme_color": "#333",
+  "theme_color": "#559db3",
   "background_color": "#ffffff",
   "display": "standalone"
 }

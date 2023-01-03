@@ -5,6 +5,7 @@ import * as IoIcons from "react-icons/io";
 import * as AiIcons from "react-icons/ai";
 import "../css/Header.css";
 
+import LogoImg from "../images/optiwing_logo.png";
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -57,9 +58,9 @@ export default class Header extends React.Component {
     return (
       <div>
         <div className="navbar">
-          <a href="/home">
-            <img alt="logo" src="" className="navbar-logo"></img>
-          </a>
+          <Link to="/home">
+            <img alt="logo" src={LogoImg} className="navbar-logo" />
+          </Link>
           <div className="navbar-right">
             <Link to="/" className="header-link">
               <button
