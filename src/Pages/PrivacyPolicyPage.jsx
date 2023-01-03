@@ -11,6 +11,7 @@ export default function AboutPage() {
       <div className="about-page-wrapper">
         <div className="about-us-container">
           <h2>1. INTRODUCTION</h2>
+          <br />
           <h2>1.1. PURPOSE OF POLICY.</h2>
           <p className="about-us-p">
             Optiwing (“us”, “we,” “Company”, “optiwing”) is committed to
@@ -23,7 +24,6 @@ export default function AboutPage() {
             data collection and use practices and policies that differ
             materially from this Policy.
           </p>
-          <hr className="divider" />
           <h2>1.2. NOTICE CONCERNING CHILDREN</h2>
           <p className="about-us-p">
             PLEASE NOTE: We are a general audience site, and do not direct any
@@ -32,6 +32,7 @@ export default function AboutPage() {
           </p>
           <hr className="divider" />
           <h2>2. INFORMATION COLLECTION PRACTICES</h2>
+          <br />
           <h2>2.1. WHAT BASIC INFORMATION DOES OPTIWING COLLECT?</h2>
           <p className="about-us-p">
             In operating the Site, we collect personal information from you in
@@ -80,6 +81,7 @@ export default function AboutPage() {
           </p>
           <hr className="divider" />
           <h2>3. USE AND SHARING OF INFORMATION</h2>
+          <br />
           <h2>3.1. WHAT DO WE DO WITH COLLECTED INFORMATION?</h2>
           <h2>(a) PERSONAL INFORMATION.</h2>
           <p className="about-us-p">
@@ -146,6 +148,7 @@ export default function AboutPage() {
           </p>
           <hr className="divider" />
           <h2>4. CONFIDENTIALITY AND SECURITY</h2>
+          <br />
           <h2>4.1. PROTECTION OF YOUR INFORMATION.</h2>
           <p className="about-us-p">
             We implement a variety of security measures to maintain the safety
@@ -163,6 +166,7 @@ export default function AboutPage() {
           </p>
           <hr className="divider" />
           <h2>5. THIRD PARTY WEBSITES</h2>
+          <br />
           <h2>5.1. OUR SITE MAY CONTAIN LINKS TO THIRD PARTY WEBSITES.</h2>
           <p className="about-us-p">
             We are not responsible for the privacy practices of other sites and
@@ -177,6 +181,7 @@ export default function AboutPage() {
           <h2>
             6. ACCESSING, UPDATING, AND DELETING YOUR PERSONAL INFORMATION
           </h2>
+          <br />
           <h2>6.1. HOW CAN YOU ACCESS AND UPDATE YOUR PERSONAL INFORMATION?</h2>
           <p className="about-us-p">
             You may request access to all your personally identifiable
@@ -192,7 +197,9 @@ export default function AboutPage() {
             us at info@optiwing.com . Please note that some information may
             remain in our records after deletion of your account.
           </p>
+          <hr className="divider" />
           <h2>7. CONTACT INFORMATION AND POLICY UPDATES</h2>
+          <br />
           <h2>7.1. CONTACTING US</h2>
           <p className="about-us-p">
             If you have any questions about this Policy or our practices related
