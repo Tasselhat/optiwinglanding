@@ -7,8 +7,6 @@ import * as FaIcons from "react-icons/fa";
 
 import "../css/Homepage.css";
 
-import LogoImg from "../images/optiwing_logo.png";
-
 export default function Homepage() {
   const homeRef = useRef();
   const instructionsRef = useRef();
@@ -35,8 +33,9 @@ export default function Homepage() {
               </h1>
               <p className="title-secondary" align="center">
                 We use live Google SERP data to create topical connection maps
-                so you know what keywords to use, pages to create, and how to
-                interlink them. No more guesswork or hours of keyword research.
+                and AI powered keyword research so you know what keywords to
+                use, pages to create, and how to relate them. No more guesswork
+                or hours of manual keyword research.
               </p>
               <div>
                 <button
@@ -66,8 +65,8 @@ export default function Homepage() {
               </p>
               <p className="the-why-info-p">
                 Get it wrong and you can get into all sorts of trouble - keyword
-                cannibalisation, lack of topical relevancy and missed search
-                intent.
+                cannibalization, low search traffic keywords, lack of topical
+                relevancy, and missed search intent.
               </p>
               <p className="the-why-info-p">
                 Here at Optiwing we solve these problems, whilst simultaneously
@@ -147,6 +146,66 @@ export default function Homepage() {
                   alternatively this will be available to download as an Excel
                   file. No guess work required, just raw keyword insights from
                   real-time Google data.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="instructions-container">
+            <div className="description">
+              <h1>How does AI powered keyword research work?</h1>
+              <p>
+                Optiwing uses cutting edge Artificial Intelligence to suggest
+                new and related keywords to speed up the keyword research
+                process. The process works as follows.
+              </p>
+            </div>
+            <div className="instructions">
+              <div className="instruction-card" id="step-1">
+                <div className="instruction-title-container">
+                  <div className="instruction-card-title">
+                    <h1>1</h1>
+                  </div>
+                  <div className="instruction-card-title-text">
+                    <h1 style={{ fontSize: "28px" }}>Select keyword and #</h1>
+                  </div>
+                </div>
+                <p className="instruction-card-p">
+                  Choose between one and twenty new related keywords to
+                  generate. Then enter the topic or keyword you wish to target
+                  when generating new keywords.
+                </p>
+              </div>
+              <div className="instruction-card" id="step-2">
+                <div className="instruction-title-container">
+                  <div className="instruction-card-title">
+                    <h1>2</h1>
+                  </div>
+                  <div className="instruction-card-title-text">
+                    <h1 style={{ fontSize: "28px" }}>Regular or long tail</h1>
+                  </div>
+                </div>
+                <p className="instruction-card-p">
+                  Select long tail for longer and more specific keyword phrases
+                  that users are more likely to search when they're closer to a
+                  point-of-purchase or when they're using voice search, or
+                  regular keywords for more similar topics and keywords to
+                  target.
+                </p>
+              </div>
+              <div className="instruction-card" id="step-3">
+                <div className="instruction-title-container">
+                  <div className="instruction-card-title">
+                    <h1>3</h1>
+                  </div>
+                  <div className="instruction-card-title-text">
+                    <h1 style={{ fontSize: "28px" }}>Results in Seconds</h1>
+                  </div>
+                </div>
+                <p className="instruction-card-p">
+                  Within seconds you'll get a list of related and similar
+                  keywords and phrases to your target keyword or topic of
+                  choice. No guess work required, just powerful keyword
+                  suggestions powered by the latest AI technology.
                 </p>
               </div>
             </div>
@@ -253,7 +312,7 @@ export default function Homepage() {
                   <hr></hr>
                 </div>
                 <div className="pricing-card-price">
-                  <h1>$9</h1>
+                  <h1>$10</h1>
                 </div>
                 <div className="pricing-styled-list">
                   <ul>
@@ -263,7 +322,7 @@ export default function Homepage() {
                     </li>
                     <li className="pricing-styled-list-item">
                       <FaIcons.FaCheck style={{ margin: "10px" }} />
-                      <span>$9.00 per 1,000 keywords</span>
+                      <span>$10.00 per 1,000 keywords</span>
                     </li>
                     <li className="pricing-styled-list-item">
                       <FaIcons.FaCheck style={{ margin: "10px" }} />
